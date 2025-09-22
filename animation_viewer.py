@@ -5,6 +5,8 @@ open_canvas()
 walk = load_image('SamuraiGirl_Walk.png')
 run = load_image('SamuraiGirl_Run.png')
 jump = load_image('SamuraiGirl_Jump.png')
+attack = load_image('SamuraiGirl_Attack.png')
+attack2 = load_image('SamuraiGirl_Attack2.png')
 
 
 frame = 0
