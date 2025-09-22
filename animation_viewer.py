@@ -24,6 +24,9 @@ def act_run():
 def act_jump():
     pass
 
+def act_attack():
+    pass
+
 
 
 close_canvas()
