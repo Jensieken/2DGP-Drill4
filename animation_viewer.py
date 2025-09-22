@@ -31,11 +31,15 @@ def act_attack():
 while True:
     for _ in range(5):
         act_walk()
+    delay(1)
     for _ in range(5):
         act_run()
+    delay(1)
     for _ in range(5):
         act_jump()
+    delay(1)
     for _ in range(5):
         act_attack()
+    delay(1)
 
 close_canvas()
