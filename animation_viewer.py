@@ -46,18 +46,19 @@ def act_attack():
     attack2_widths = [167, 167, 167]
     attack2_height = 170
 
+    base_x = 400
     base_y = 200
 
     for i, width in enumerate(attack1_widths):
         clear_canvas()
-        attack.clip_draw(sum(attack1_widths[:i]), 0, width, attack1_height, 400, base_y + attack1_height // 2, width,
+        attack.clip_draw(sum(attack1_widths[:i]), 0, width, attack1_height, 400, base_x, base_y + attack1_height // 2, width,
                          attack1_height)
         update_canvas()
         delay(0.15)
 
     for i, width in enumerate(attack2_widths):
         clear_canvas()
-        attack2.clip_draw(sum(attack2_widths[:i]), 0, width, attack2_height, 400, base_y + attack2_height // 2, width,
+        attack2.clip_draw(sum(attack2_widths[:i]), 0, width, attack2_height, 400, base_x, base_y + attack2_height // 2, width,
                           attack2_height)
         update_canvas()
         delay(0.15)
