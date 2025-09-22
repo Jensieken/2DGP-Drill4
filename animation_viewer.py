@@ -40,7 +40,6 @@ def act_jump():
     pass
 
 def act_attack():
-
     attack1_widths = [102, 102, 172, 165]
     attack1_height = 130
 
@@ -48,22 +47,28 @@ def act_attack():
     attack2_height = 170
 
     base_x = 400
-    base_y = 300  # 화면 중앙
+    base_y = 150  # 바닥 y좌표 (walk 등과 동일하게 맞춤)
+    draw_height = 300  # 항상 동일한 크기로 출력
+    draw_width = 300
 
     # 1번 시트 프레임
     for i, width in enumerate(attack1_widths):
         clear_canvas()
-        attack.clip_draw(sum(attack1_widths[:i]), 0, width, attack1_height, base_x, base_y, 300, 300)
+        # 발이 바닥에 고정되도록 y좌표 보정
+        offset_y = (draw_height // 2) - (attack1_height // 2)
+        attack.clip_draw(sum(attack1_widths[:i]), 0, width, attack1_height,
+                         base_x, base_y + offset_y, draw_width, draw_height)
         update_canvas()
         delay(0.15)
 
     # 2번 시트 프레임
     for i, width in enumerate(attack2_widths):
         clear_canvas()
-        attack2.clip_draw(sum(attack2_widths[:i]), 0, width, attack2_height, base_x, base_y, 300, 300)
+        offset_y = (draw_height // 2) - (attack2_height // 2)
+        attack2.clip_draw(sum(attack2_widths[:i]), 0, width, attack2_height,
+                          base_x, base_y + offset_y, draw_width, draw_height)
         update_canvas()
         delay(0.15)
-    pass
     pass
 
 while True:
