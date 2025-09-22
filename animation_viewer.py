@@ -17,12 +17,6 @@ def act_walk():
         frame = (frame + 1) % 8
         delay(0.05)
 
-    for x in range(0, 401, 10):
-        clear_canvas()
-        walk.clip_draw(frame * 165, 0, 165, 130, 800 - (x - 400) + 165 // 2, 150, 300, 300)
-        update_canvas()
-        frame = (frame + 1) % 8
-        delay(0.05)
     pass
 
 def act_run():
