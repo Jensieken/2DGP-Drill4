@@ -4,6 +4,8 @@ open_canvas()
 
 walk = load_image('SamuraiGirl_Walk.png')
 run = load_image('SamuraiGirl_Run.png')
+jump = load_image('SamuraiGirl_Jump.png')
+
 
 frame = 0
 for x in range(0, 800, 10):
