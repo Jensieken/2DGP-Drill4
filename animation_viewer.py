@@ -10,14 +10,8 @@ attack2 = load_image('SamuraiGirl_Attack2.png')
 
 def act_walk():
     frame = 0
-    for x in range(400, 800, 10):
-        clear_canvas()
-        walk.clip_draw(frame * 165, 0, 165, 130, x + 165 // 2, 150, 300, 300)
-        update_canvas()
-        frame = (frame + 1) % 8
-        delay(0.05)
-
-    for x in range(0, 400, -10):
+    x = 400
+    for x in range(0, 800, 10):
         clear_canvas()
         walk.clip_draw(frame * 165, 0, 165, 130, x + 165 // 2, 150, 300, 300)
         update_canvas()
@@ -34,6 +28,6 @@ def act_jump():
 def act_attack():
     pass
 
-
+act_walk()
 
 close_canvas()
