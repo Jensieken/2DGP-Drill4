@@ -17,6 +17,8 @@ def act_walk():
         frame = (frame + 1) % 8
         delay(0.05)
     pass
+def act_run():
+    pass
 
 
 close_canvas()
