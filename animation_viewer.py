@@ -50,19 +50,20 @@ def act_attack():
     base_x = 400
     base_y = 300  # 화면 중앙
 
-    x_offset = 0
-    for width in attack1_widths:
+    # 1번 시트 프레임
+    for i, width in enumerate(attack1_widths):
         clear_canvas()
-        attack.clip_draw(x_offset, 0, width, attack1_height, base_x, base_y, 300, 300)
+        attack.clip_draw(sum(attack1_widths[:i]), 0, width, attack1_height, base_x, base_y, 300, 300)
         update_canvas()
         delay(0.15)
 
-    x_offset = 0
-    for width in attack2_widths:
+    # 2번 시트 프레임
+    for i, width in enumerate(attack2_widths):
         clear_canvas()
-        attack2.clip_draw(x_offset, 0, width, attack2_height, base_x, base_y, 300, 300)
+        attack2.clip_draw(sum(attack2_widths[:i]), 0, width, attack2_height, base_x, base_y, 300, 300)
         update_canvas()
         delay(0.15)
+    pass
     pass
 
 while True:
