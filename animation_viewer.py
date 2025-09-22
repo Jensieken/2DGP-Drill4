@@ -28,6 +28,14 @@ def act_jump():
 def act_attack():
     pass
 
-act_walk()
+while True:
+    for _ in range(5):
+        act_walk()
+    for _ in range(5):
+        act_run()
+    for _ in range(5):
+        act_jump()
+    for _ in range(5):
+        act_attack()
 
 close_canvas()
