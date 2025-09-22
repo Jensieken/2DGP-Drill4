@@ -30,6 +30,13 @@ def act_run():
     pass
 
 def act_jump():
+    frame = 0
+    for x in range(320, 800, 20):
+        clear_canvas()
+        jump.clip_draw(frame * 165, 0, 165, 130, x + 165 // 2, 300, 300, 300)
+        update_canvas()
+        frame = (frame + 1) % 8
+        delay(0.05)
     pass
 
 def act_attack():
